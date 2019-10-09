@@ -1,0 +1,51 @@
+<div class="container">
+    <form (ngSubmit)="editBook()" class="col-md-6">
+    <div class="form-group">
+        <label for="m-input">Name</label>
+        <input placeholder="Name" class="form-control" type="text" name="name" [(ngModel)]="detail.name">
+    </div>
+
+    <div class="form-group">
+        <label for="m-input">DOB</label>
+        <input placeholder="Date od Birth" class="form-control" type="number"required name="dob" [(ngModel)]="detail.dob">
+    </div>
+
+    <div class="form-group">
+        <label for="m-input">Address</label>
+        <input placeholder="Home address" class="form-control" type="text" name="address" [(ngModel)]="detail.address">
+    </div>
+
+    <div class="form-group">
+        <label for="m-input">Phone</label>
+        <input placeholder="Phone number" class="form-control" type="number" required name="phone" [(ngModel)]="detail.phone">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add Data</button>
+</form>
+
+<form (ngSubmit)="editData()" class="col-md-6">
+        <div class="form-group">
+                <h2><strong>Educational Info</strong></h2>
+            <label for="m-input">Degree</label>
+            <input placeholder="degree" class="form-control" type="text" name="degree" [(ngModel)]="datas.degree">
+        </div>
+    
+        <div class="form-group">
+            <label for="m-input">Marks</label>
+            <input placeholder="marks" class="form-control" type="number"required name="marks" [(ngModel)]="datas.marks">
+        </div>
+    
+        <div class="form-group">
+            <label for="m-input">Stream</label>
+            <input placeholder="stream" class="form-control" type="text" name="stream" [(ngModel)]="datas.stream">
+        </div>
+    
+        <div class="form-group">
+            <label for="m-input">College</label>
+            <input placeholder="college" class="form-control" type="text" required name="college" [(ngModel)]="datas.college">
+        </div>
+    
+        <button class="btn btn-primary" type="submit">Add Data</button>
+        </form>
+</div>
+

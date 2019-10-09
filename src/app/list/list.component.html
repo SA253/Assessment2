@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        
+    <table class="table table-hover" class="col-md-6">
+        <thead >
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+
+            </tr>
+
+        </thead>
+        <tbody *ngIf="details.length>0">
+                <tr *ngFor="let detail of details">
+                  <th scope="row">{{detail.id}}</th>
+                  <td>{{detail.name}}</td>
+                  <td>{{detail.dob}}</td>
+                  <td>{{detail.address}}</td>
+                  <td>{{detail.phone}}</td>
+                  <td>
+                    <a routerLink="/edit/{{detail.id}}" class="btn btn-sm btn-dark">edit</a>|
+                    <a routerLink="/delete/{{detail.id}}" class="btn btn-sm btn-danger">delete</a>|
+                    <a routerLink="/view/{{detail.id}}" class="btn btn-sm btn-info">view</a>
+                </td>
+               
+                </tr>
+              
+                  
+              </tbody>
+    </table>
+
+    <table class="table table-hover" class="col-md-6">
+            <thead >
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Degree</th>
+                    <th scope="col">Marks</th>
+                    <th scope="col">Stream</th>
+                    <th scope="col">College</th>
+    
+                </tr>
+    
+            </thead>
+            <tbody *ngIf="data.length>0">
+                    <tr *ngFor="let d of data">
+                      <th scope="row">{{d.id}}</th>
+                      <td>{{d.degree}}</td>
+                      <td>{{d.marks}}</td>
+                      <td>{{d.stream}}</td>
+                      <td>{{d.college}}</td>
+                      <td>
+                        <a routerLink="/edit/{{data.id}}" class="btn btn-sm btn-dark">edit</a>|
+                        <a routerLink="/delete/{{data.id}}" class="btn btn-sm btn-danger">delete</a>|
+                        <a routerLink="/view/{{data.id}}" class="btn btn-sm btn-info">view</a>
+                    </td>
+                   
+                    </tr>
+                  
+                      
+                  </tbody>
+        </table>
+
+</div>
+</div>
+
